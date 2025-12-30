@@ -1,0 +1,11 @@
+defaults:
+  - data: data
+  - model: model
+  - train: train
+  - logging: logging
+  - _self_
+
+project: "CMI2025"
+exp_name: "imu_102_10"
+seed: 42
+debug: False

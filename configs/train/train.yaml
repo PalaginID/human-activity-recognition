@@ -1,0 +1,10 @@
+batch_size: 32
+lr: 1e-3
+weight_decay: 1e-4
+max_epochs: 50
+use_mixup: True
+mixup_alpha: 0.5
+use_tof_mask_augmentation_prob: 0.1
+save_logits: True
+accelerator: "gpu"
+devices: 1

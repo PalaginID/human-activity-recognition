@@ -1,0 +1,2 @@
+- debug=true
+- train.max_epochs=1

@@ -1,0 +1,34 @@
+data:
+  csv_path: input/train.csv
+  cache_dir: ./cache
+  rot_zero: false
+  n_folds: 20
+  fold: 0
+  num_workers: 0
+model:
+  model_type: imu
+  input_size: 14
+  hidden_size: 128
+  num_layers: 2
+  num_classes: 144
+train:
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  max_epochs: 5
+  use_mixup: true
+  mixup_alpha: 0.5
+  use_tof_mask_augmentation_prob: 0.1
+  save_logits: true
+  accelerator: cpu
+  devices: 1
+logging:
+  mlflow:
+    tracking_uri: http://127.0.0.1:8080
+    experiment_name: gesture_recognition
+    registered_model_name: GestureModel
+    log_artifacts: true
+project: CMI2025
+exp_name: imu_102_10
+seed: 42
+debug: true

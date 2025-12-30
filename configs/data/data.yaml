@@ -1,0 +1,9 @@
+csv_path: "input/train.csv"
+cache_dir: "./cache"
+
+rot_zero: False
+
+n_folds: 10
+fold: null
+
+num_workers: 32

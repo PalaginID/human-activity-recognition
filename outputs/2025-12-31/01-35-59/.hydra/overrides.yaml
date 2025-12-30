@@ -1,0 +1,7 @@
+- train.max_epochs=1
+- train.accelerator=cpu
+- data.num_workers=0
+- data.n_folds=20
+- data.fold=0
+- logging.mlflow.tracking_uri=http://127.0.0.1:5050
+- logging.mlflow.experiment_name=har_test2

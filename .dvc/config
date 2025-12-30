@@ -1,0 +1,4 @@
+[core]
+    remote = human-activity-recognition
+['remote "human-activity-recognition"']
+    url = https://storage.yandexcloud.net/human-activity-recognition

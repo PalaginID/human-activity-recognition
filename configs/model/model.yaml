@@ -1,0 +1,6 @@
+model_type: "imu" # Варианты: "imu", "all", "imu_simple", "all_simple", "imu_deep", "all_deep", "all_25d"
+
+input_size: 14
+hidden_size: 128
+num_layers: 2
+num_classes: 144

@@ -1,0 +1,4 @@
+- debug=true
+- train.max_epochs=1
+- train.accelerator=cpu
+- data.num_workers=0

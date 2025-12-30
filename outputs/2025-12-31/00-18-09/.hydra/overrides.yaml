@@ -1,0 +1,5 @@
+- train.max_epochs=5
+- train.accelerator=cpu
+- data.num_workers=0
+- data.n_folds=20
+- data.fold=0
