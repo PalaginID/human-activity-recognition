@@ -114,7 +114,7 @@
 ```bash
 # 1. Клонирование репозитория
 git clone https://github.com/PalaginID/human_activity_recognition.git
-cd human_activity_recognition
+cd human-activity-recognition
 
 # 2. Установка UV (если не установлен)
 pip install uv
