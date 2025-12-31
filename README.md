@@ -103,7 +103,7 @@
 
 ---
 
-## Установка
+## Setup
 
 ### Предварительные требования
 
@@ -116,7 +116,7 @@
 ```bash
 # 1. Клонирование репозитория
 git clone https://github.com/PalaginID/human_activity_recognition.git
-cd human-activity-recognition
+cd human_activity_recognition
 
 # 2. Установка UV (если не установлен)
 pip install uv
@@ -124,7 +124,7 @@ pip install uv
 # 3. Создание виртуального окружения и установка зависимостей
 uv sync
 source .venv/bin/activate  # Linux/Mac
-# или .venv\Scripts\activate  # Windows
+# или source .venv/Scripts/activate  # Windows
 
 # 4. Установка pre-commit hooks
 uv run pre-commit install
@@ -132,7 +132,9 @@ uv run pre-commit install
 uv run pre-commit run -a
 ```
 
-## Запуск обучения
+## Train
+
+Запуск обучения запускается следующим скриптом:
 
 ```bash
 uv run python -m human_activity_recognition.train
