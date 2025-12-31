@@ -1,3 +1,4 @@
+import subprocess
 import sys
 from pathlib import Path
 
@@ -285,6 +286,18 @@ def create_dataset(
     return train_ds, val_ds
 
 
+def log_git_info(run_id, tracking_uri):
+    import mlflow
+
+    commit = subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], encoding="utf-8", stderr=subprocess.DEVNULL
+    ).strip()
+    with mlflow.start_run(run_id=run_id):
+        mlflow.set_tag("git.commit", commit)
+
+    print(f"Training completed.\nMLflow run ID: {run_id}\nView results at: {tracking_uri}")
+
+
 def run_fold(
     cfg: DictConfig, fold_idx: int, df: pl.DataFrame, label2idx: dict[tuple[str, str, str], int]
 ):
@@ -379,8 +392,7 @@ def run_fold(
     trainer.fit(model, dm)
 
     if mlflow_logger:
-        print(f"Training completed. MLflow run ID: {mlflow_logger.run_id}")
-        print(f"View results at: {tracking_uri}")
+        log_git_info(mlflow_logger.run_id, tracking_uri)
 
     metrics = {}
     callback_metrics = trainer.callback_metrics

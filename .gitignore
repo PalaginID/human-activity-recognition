@@ -35,3 +35,9 @@ Thumbs.db
 .dvc/cache/
 
 mlruns/
+
+poetry.lock
+
+outputs/
+
+.ruff_cache/
